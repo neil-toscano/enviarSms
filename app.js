@@ -16,7 +16,7 @@ app.get('/enviarsms', function (req, res) {
   .create({
      body: 'Robotica gaaaaaaaaa!',
      from: '+14346026558',
-     to: '+51918166301'
+     to: '+5191816630'
    })
   .then(message => console.log(`Mensaje enviado: ${message.sid}`));
   
