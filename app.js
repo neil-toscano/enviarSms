@@ -17,7 +17,7 @@ app.get('/enviarsms', function (req, res) {
   .create({
      body: mensaje,
      from: '+14346026558',
-     to: '+519466841301'
+     to: '+51918166301'
    })
   .then(message => console.log(`Mensaje enviado: ${message.sid}`));
   
