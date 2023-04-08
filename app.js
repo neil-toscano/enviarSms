@@ -11,7 +11,10 @@ const port=process.env.PORT;
   app.use(cors());
   
 app.get('/enviarsms', function (req, res) {
+  
   let mensaje=req.query.mensaje;
+  if(mensaje){
+
     res.send("hello world");
     client.messages
   .create({
@@ -20,6 +23,10 @@ app.get('/enviarsms', function (req, res) {
      to: '+51918166301'
    })
   .then(message => console.log(`Mensaje enviado: ${message.sid}`));
+  }
+  else{
+    res.send("hello world");
+  }
   
 })
 
